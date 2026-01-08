@@ -13,8 +13,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/camel-ai/rosetta.git
-cd rosetta
+git clone https://github.com/camel-ai/seta.git
+cd seta
 bash setup.sh
 ```
 
