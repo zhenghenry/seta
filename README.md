@@ -79,3 +79,15 @@ Everything is under training folder
 Please refer to [Training Setup](training/tbench_areal_workflow/README.md) for detailed instructions.
 
 ***Note***: new TerminalToolkit design document [Terminal Toolkit Design](docs/terminal_toolkit_design.md)
+
+# Citation
+```
+@misc{seta,
+  author    = {Qijia Shen and Jay Rainton and Aznaur Aliev and Ahmed Awelkair and Boyuan Ma and Zhiqi (Julie) Huang and Yuzhen Mao and Wendong Fan and Philip Torr and Bernard Ghanem and Changran Hu and Urmish Thakker and Guohao Li},
+  title     = {{SETA: Scaling Environments for Terminal Agents}},
+  year      = {2026},
+  month     = jan,
+  url       = {https://github.com/camel-ai/seta},
+  note      = {Blog: \url{https://eigent-ai.notion.site/SETA-Scaling-Environments-for-Terminal-Agents-2d2511c70ba280a9b7c0fe3e7f1b6ab8}}
+}
+```
