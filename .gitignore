@@ -20,6 +20,9 @@ jobs/
 evaluation/terminal_bench_eval/jobs/
 evaluation/terminal_bench_eval/logs/
 evaluation/terminal_bench_run/output/
+training/custom_seta/outputs/*
+*vllm_minimax*
+*context*
 
 # Log files
 *.log

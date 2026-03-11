@@ -1,0 +1,47 @@
+# ============================================================
+# Custom SETA Evaluation Config
+# ============================================================
+# Backend: "vllm" or "openrouter"
+backend: vllm
+
+# --- vLLM settings (local server) ---
+vllm:
+  base_url: "http://localhost:8000/v1"
+  model: "MiniMaxAI/MiniMax-M2.5"
+  api_key: "EMPTY"
+
+# --- OpenRouter settings (cloud API) ---
+openrouter:
+  base_url: "https://openrouter.ai/api/v1"
+  model: "minimax/minimax-m2.5"
+  api_key: ""  # Or set OPENROUTER_API_KEY env var
+
+# --- Generation settings ---
+temperature: 1.0
+top_p: 0.95
+top_k: 40
+max_tokens_per_turn: 10240
+max_total_tokens: 196608
+max_iteration: 20
+non_think_mode: false
+
+# --- Dataset ---
+dataset_path: "tbench-tasks_convert/train.parquet"
+task_filter: []  # Empty = all tasks; or ["task-name-1", "task-name-2"]
+
+# --- Execution ---
+batch_size: 16       # Number of tasks to run concurrently
+n_trajs: 4          # Trajectories per task
+max_workers: 16     # Thread pool size for Docker/IO operations
+cleanup_docker_resources: True  # If true, remove task containers, networks, volumes, and images after each run
+
+# --- Output ---
+output_dir: "outputs/vllm_minimax_m2.5"
+
+# --- Timeouts (seconds) ---
+timeouts:
+  reset_env: 600
+  reset_agent: 240
+  agent_step: 600
+  evaluate: 600
+  cleanup: 600
